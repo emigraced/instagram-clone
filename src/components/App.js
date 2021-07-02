@@ -10,6 +10,8 @@ const App = () => {
       <Nav/>
       <StoryBar/>
       <Post/>
+      <Post/>
+      <Post/>
       
     </>
   )

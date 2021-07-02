@@ -15,7 +15,7 @@ export const StoryBar = () => {
 
 const StoryContainer = styled.section`
     height: 100px;
-    width: 100vw;
+    width: 100%;
     background: white;
     margin-top: 53px;
 `

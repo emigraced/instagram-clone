@@ -21,19 +21,20 @@ export const Post = () => {
             </Header>
             <Photo src={placeholder} alt="A picture of a white balcony on a warm orange wall."/> 
             <InteractionBar>
-                <Icon first src={heart} alt="like button"/>
+                <Icon heart src={heart} alt="like button"/>
                 <Icon src={comment} alt="comment button"/>
-                <Icon src={share} alt="share button"/>
-                <Icon last src={bookmark} alt="save button"/>                
+                <Icon share src={share} alt="share button"/>
+                <Icon bookmark src={bookmark} alt="save button"/>                
             </InteractionBar>
             <Caption>
                 
+                <CaptionText caption><CaptionText username>emigraced</CaptionText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod quam sit amet diam fermentum ullamcorper. </CaptionText>
             </Caption>
             <Comments>
-                <p>View all n comments</p>
+            
             </Comments>
             <TimeStamp>
-                <p>n hours ago</p>
+        
             </TimeStamp>
 
 
@@ -65,8 +66,6 @@ const HeaderText = styled.p`
     font-size: ${props => props.location ? "12px" : "16px"};
 `
 
-
-
 const Options = styled.img`
     height: 25px;
     width: 25px;
@@ -78,21 +77,30 @@ const Photo = styled.img`
 `
 
 const InteractionBar = styled.div`
-    height: 60px;
+    height: 50px;
     width: 100%;
     background: white;
+    display: flex;
 `
 
 const Icon = styled.img`
     height: 28px;
     width: 28px;
     margin: 5px 8px;
-    ${props => props.first ? "margin-left: 15px" : null}
-    ${props => props.last ? "position: absolute; right: 10px;" : null}
+    ${props => props.heart ? "margin-left: 10px" : null}
+    ${props => props.share ? "margin-left: 5px" : null}
+    ${props => props.bookmark ? "margin: 5px 10px auto auto " : null}
 `
 
 const Caption = styled.div`
+    display: flex;
+    margin: 0 12px;
+    
+`
 
+const CaptionText = styled.p`
+    margin: 0;
+    ${props => props.username ? "font-weight: bold; margin-right: 3px; display: inline;" : null}
 `
 
 const Comments = styled.div`

@@ -23,12 +23,14 @@ export const Nav = () => {
 
 const Navbar = styled.nav`
     width: 100%;
+    max-width: 700px;
     height: 50px;
     background-color: white;
     position: fixed;
     top: 0;
     opacity: 1;
-    z-index:10;
+    z-index: 10;
+    display: flex;
 `
 
 const Logo = styled.p`
@@ -38,14 +40,12 @@ const Logo = styled.p`
 `
 
 const IconsWrapper = styled.div`
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    
+    margin: 15px 18px auto auto 
 `
 
 const Icon = styled.img`
     height: ${props => props.smaller ? "23px" : "22px"};
     width: ${props => props.smaller ? "23px" : "22px"};
     margin-left: 18px;
+    display: inline-block;
 `
