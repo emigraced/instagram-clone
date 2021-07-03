@@ -55,7 +55,7 @@ const Avatar = styled.img`
 
 const HeaderText = styled.p`
     margin: 0;
-    ${props => props.username ? "margin-top: 15px;" : null}
+    ${props => props.username ? "margin-top: 15px; font-weight: bold;" : null}
     font-size: ${props => props.location ? "12px" : "16px"};
 `
 

@@ -3,6 +3,7 @@ html, body {
     background-color: #FAFAFA;
     overflow-x: hidden;
     max-width: 100%;
+    color: #2C2C2C;
 }
 
 @media only screen and (min-width: 700px) {
