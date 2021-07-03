@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Comments } from '../components/Comments'
 import avatar from '../images/avatar.jpg'
 import options from '../images/options.svg'
 import placeholder from '../images/ig-placeholder.jpg'
@@ -27,17 +28,9 @@ export const Post = () => {
                 <Icon bookmark src={bookmark} alt="save button"/>                
             </InteractionBar>
             <Caption>
-                
                 <CaptionText caption><CaptionText username>emigraced</CaptionText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod quam sit amet diam fermentum ullamcorper. </CaptionText>
             </Caption>
-            <Comments>
-            
-            </Comments>
-            <TimeStamp>
-        
-            </TimeStamp>
-
-
+            <Comments/>
         </>
     )
 }
@@ -94,19 +87,11 @@ const Icon = styled.img`
 
 const Caption = styled.div`
     display: flex;
-    margin: 0 12px;
-    
+    margin: 0 12px;    
 `
 
 const CaptionText = styled.p`
     margin: 0;
+    font-size: 16px;
     ${props => props.username ? "font-weight: bold; margin-right: 3px; display: inline;" : null}
-`
-
-const Comments = styled.div`
-
-`
-
-const TimeStamp = styled.div`
-
 `
