@@ -13,7 +13,7 @@ export const Post = () => {
     return (
         <>
             <Header>
-                <Avatar poster src={avatar} alt="profile picture"/>
+                <PostersAvatar src={avatar} alt="profile picture"/>
                 <div>
                     <HeaderText username>emigraced</HeaderText>
                     <HeaderText location>Brisbane</HeaderText>
@@ -29,12 +29,12 @@ export const Post = () => {
                     <Icon bookmark src={bookmark} alt="save button"/>  
                 </IconsContainer>
                 <LikePreviewContainer>
-                    <Avatar liker src={avatar} alt="avatar" />
-                    <LikePreview>Liked by _ and others</LikePreview>
+                    <LikersAvatar src={avatar} alt="avatar" />
+                    <LikedBy>Liked by <strong>emigraced</strong> and others</LikedBy>
                 </LikePreviewContainer>              
             </InteractionBar>
             <Caption>
-                <CaptionText caption><CaptionText username>emigraced</CaptionText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod quam sit amet diam fermentum ullamcorper. </CaptionText>
+                <CaptionText><Username>emigraced</Username>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod quam sit amet diam fermentum ullamcorper.</CaptionText>
             </Caption>
             <Comments/>
             <TimeStamp>n hours ago</TimeStamp>
@@ -49,13 +49,14 @@ const Header = styled.div`
     display: flex;
 `
 
-const Avatar = styled.img`
-    border: solid 1px black;
+const PostersAvatar = styled.img`
     border-radius: 50%;
     object-fit: cover;
-    height: 18px;
-    width: 18px;
-    ${props => props.poster ? "display: inline-block; margin: 15px; border: solid 2px #D45784; height: 30px; width: 30px;" : null}
+    display: inline-block; 
+    margin: 15px; 
+    border: solid 2px #D45784; 
+    height: 30px;
+    width: 30px;
 `
 
 const HeaderText = styled.p`
@@ -100,8 +101,15 @@ const LikePreviewContainer = styled.div`
     display: flex;
     margin: 3px 12px 0;
 `
+const LikersAvatar = styled.img`
+    border: solid 1px black;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 18px;
+    width: 18px;
+`
 
-const LikePreview = styled.p`
+const LikedBy = styled.p`
     font-size: 14px;
     margin: 5px;
 `
@@ -115,7 +123,12 @@ const Caption = styled.div`
 const CaptionText = styled.p`
     margin: 0;
     font-size: 16px;
-    ${props => props.username ? "font-weight: bold; margin-right: 3px; display: inline;" : null}
+`
+
+const Username = styled.span`
+    font-weight: bold; 
+    margin-right: 3px; 
+    display: inline;
 `
 
 const TimeStamp = styled.p`

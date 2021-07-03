@@ -6,8 +6,8 @@ export const Comments = () => {
         <SectionWrapper>
             <NComments>View all n comments</NComments>
             <Preview>
-                <CommentText Comment><CommentText username>fizzbuzz</CommentText>Lorem ipsum dolor sit amet!</CommentText>
-                <CommentText Comment><CommentText username>foobar</CommentText>Aenean euismod quam sit amet diam fermentum ullamcorper :) </CommentText>
+                <CommentText><Username>fizzbuzz</Username>Lorem ipsum dolor sit amet!</CommentText>
+                <CommentText><Username>foobar</Username>Aenean euismod quam sit amet diam fermentum ullamcorper :) </CommentText>
             </Preview>
         </SectionWrapper>
     )
@@ -32,5 +32,10 @@ const Preview = styled.div`
 const CommentText = styled.p`
     margin: 5px 0 0 0;
     font-size: 16px;
-    ${props => props.username ? "font-weight: bold; margin-right: 3px; display: inline;" : null}
+`
+
+const Username = styled.span`
+    font-weight: bold; 
+    margin-right: 3px; 
+    display: inline;
 `
