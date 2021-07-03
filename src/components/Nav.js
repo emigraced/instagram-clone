@@ -4,7 +4,7 @@ import homeIcon from '../images/home.svg'
 import messageIcon from '../images/message.svg'
 import searchIcon from '../images/search.svg'
 import notificationIcon from '../images/heart.svg'
-import circleIcon from '../images/circle.svg'
+import avatar from '../images/avatar.jpg'
 
 export const Nav = () => {
     return (
@@ -15,7 +15,7 @@ export const Nav = () => {
                 <Icon smaller src={messageIcon} alt="messages icon"/>
                 <Icon smaller src={searchIcon} alt="search icon"/>
                 <Icon src={notificationIcon} alt="notifications heart icon"/>
-                <Icon last src={circleIcon} alt="circle icon"/>
+                <Icon avatar src={avatar} alt="avatar"/>
             </IconsWrapper>
         </Navbar>
     )
@@ -48,4 +48,5 @@ const Icon = styled.img`
     width: ${props => props.smaller ? "23px" : "22px"};
     margin-left: 18px;
     display: inline-block;
+    ${props => props.avatar ? "height: 18px; width: 18px; border: solid 1px black; border-radius: 50%; object-fit: cover;" : null}
 `

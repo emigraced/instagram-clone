@@ -4,12 +4,11 @@ import styled from 'styled-components'
 export const Comments = () => {
     return (
         <SectionWrapper>
-            <Summary ncomments>View all n comments</Summary>
+            <NComments>View all n comments</NComments>
             <Preview>
                 <CommentText Comment><CommentText username>fizzbuzz</CommentText>Lorem ipsum dolor sit amet!</CommentText>
                 <CommentText Comment><CommentText username>foobar</CommentText>Aenean euismod quam sit amet diam fermentum ullamcorper :) </CommentText>
             </Preview>
-            <Summary nhours>n hours ago</Summary>
         </SectionWrapper>
     )
 }
@@ -18,12 +17,11 @@ const SectionWrapper = styled.section`
     margin: 0 12px;
 `
 
-const Summary = styled.p`
+const NComments = styled.p`
     font-size: 15px;
     color: grey;
     margin-top: 5px;
-    ${props => props.ncomments ? "margin-bottom: 0;" : null}
-    ${props => props.nhours ? "font-size: 10px; margin: 15px 0 20px 0; text-transform: uppercase;" : null}
+    margin-bottom: 0;
 `
 
 const Preview = styled.div`

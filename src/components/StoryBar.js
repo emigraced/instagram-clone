@@ -14,10 +14,9 @@ export const StoryBar = () => {
 }
 
 const StoryContainer = styled.section`
-    height: 100px;
+    height: 80px;
     width: 100%;
-    background: white;
-    margin-top: 53px;
+    margin-top: 50px;
 `
 
 const Circle = styled.div`
@@ -26,5 +25,5 @@ const Circle = styled.div`
     border: solid 2px #D45784;
     border-radius: 50%;
     display: inline-block;
-    margin: 25px 9px
+    margin: 15px 9px
 `
