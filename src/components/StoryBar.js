@@ -9,6 +9,16 @@ export const StoryBar = () => {
             <Circle/>
             <Circle/>
             <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
         </StoryContainer>
     )
 }
@@ -17,6 +27,14 @@ const StoryContainer = styled.section`
     height: 80px;
     width: 100%;
     margin-top: 50px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 
 const Circle = styled.div`
@@ -25,5 +43,5 @@ const Circle = styled.div`
     border: solid 2px #D45784;
     border-radius: 50%;
     display: inline-block;
-    margin: 15px 9px
+    margin: 15px 9px;
 `
